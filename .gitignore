@@ -115,8 +115,8 @@ $RECYCLE.BIN/
 *.css.map
 
 
-### Less ###
-*.css
+# ### Less ###
+# *.css
 
 
 ### grunt ###
