@@ -8,9 +8,10 @@ You can find static web pages developed to practice CSS in this repo.
 
 ## E-commerce Cards
 
-### The project is under development. A screenshot will be added for Responsive. Live link will be added.
+### Live link for Hotel Site <br> https://hepsibukadar.netlify.app/
 
-![E-commerce Website](/ScreenShots/e-commerce.png)
+<img src="ScreenShots/e-commerce.png" width="500px" />
+<img src="ScreenShots/e-commerce-responsive.png" width="500px" />
 
 ## Hotel Site
 

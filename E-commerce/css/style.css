@@ -175,3 +175,17 @@ a {
 .products div a:hover {
   opacity: 0.7;
 }
+@media (max-width: 1007px) {
+  .nav-search input {
+    width: 15rem;
+  }
+}
+@media (max-width: 856px) {
+  .flex-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .nav-search input {
+    width: 30rem;
+  }
+}
