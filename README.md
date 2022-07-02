@@ -4,6 +4,6 @@
 
 You can find static web pages developed to practice CSS in this repo.
 
-### Live link for e-commerce <br> https://hepsibukadar.netlify.app/
+### Live link for <a href="https://hepsibukadar.netlify.app/" target="_blank">e-commerce.</a>
 
-### Live link for Hotel Site <br> https://fake-fimar.netlify.app/
+### Live link for <a href="https://fake-fimar.netlify.app/" target="_blank">hotel site.</a>
