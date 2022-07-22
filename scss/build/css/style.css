@@ -1,0 +1,153 @@
+@charset "UTF-8";
+body {
+  font-family: Cambria, "Hoefler Text", Liberation Serif ", Times, " Times New Roman ", " serif;
+  background-color: cornsilk;
+}
+
+li {
+  list-style: none;
+}
+
+.example {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 100px;
+  border-bottom-color: red;
+}
+
+.last {
+  background-color: white;
+  color: red;
+}
+
+.info, .warning, .success, .error {
+  border: 1px solid #21b179;
+  padding: 10px;
+  width: 40%;
+  color: #21b179;
+}
+
+.error {
+  border-color: red;
+  color: red;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 400px;
+  border-radius: 800px;
+}
+
+.success {
+  border-color: green;
+  color: green;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 400px;
+}
+
+.warning {
+  border-color: orange;
+  color: orange;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.info {
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -webkit-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+#menu {
+  background-color: darkkhaki;
+}
+#menu ul {
+  width: 100%;
+  list-style: none;
+}
+#menu li {
+  display: inline-block;
+}
+#menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+  text-align: center;
+}
+#menu a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+section article .article-header {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  border-bottom: 1px dashed black;
+}
+section article .article-content {
+  font-family: Helvetica, sans-serif;
+  color: #444;
+}
+section article .article-content a {
+  color: green;
+  text-decoration: none;
+}
+section article .article-content a:hover {
+  color: red;
+  text-decoration: underline;
+}
+section article p .article-footer {
+  font-weight: bold;
+  color: darkkhaki;
+  border-top: 1px dashed black;
+}
+
+/* Bu .css'te görünür */
+/* scss-L2*/
+/* scss-L3*/
+.fontsize-5 {
+  font-size: 5px;
+}
+
+.fontsize-10 {
+  font-size: 10px;
+}
+
+.fontsize-15 {
+  font-size: 15px;
+}
+
+.fontsize-20 {
+  font-size: 20px;
+}
+
+.fontsize-25 {
+  font-size: 25px;
+}
+
+.fontsize-30 {
+  font-size: 30px;
+}
+
+.fontsize-35 {
+  font-size: 35px;
+}
+
+.text {
+  font-family: Gotham, "Helvetica Neue";
+  font-size: 98;
+  font-style: normal;
+  font-weight: bold;
+  border: 2px solid black;
+  font-weight: 400;
+  width: 50%;
+  padding: 20px;
+  margin: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

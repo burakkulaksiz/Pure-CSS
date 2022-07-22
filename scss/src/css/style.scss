@@ -1,0 +1,144 @@
+@import "reset";
+@import "variables";
+@import "message";
+
+#menu {
+  background-color: $color;
+
+  ul {
+    width: 100%;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
+
+section {
+  article {
+    .article-header {
+      font-size: 30px;
+      font-weight: bold;
+      color: green;
+      border-bottom: 1px dashed black;
+    }
+
+    .article-content {
+      font-family: $font;
+      color: #444;
+
+      a {
+        color: green;
+        text-decoration: none;
+        &:hover {
+          color: red;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      .article-footer {
+        font-weight: bold;
+        color: $color;
+        border-top: 1px dashed black;
+      }
+    }
+  }
+}
+
+// Bu .css'te görünmez
+/* Bu .css'te görünür */
+
+/* scss-L2*/
+
+// .error {
+//   border: 1px solid red;
+//   color: red;
+//   padding: 15px;
+// }
+
+// .error-width {
+//   @extend .error;
+//   border-width: 3px;
+// }
+
+/* scss-L3*/
+
+// $sizes: 5px, 10px, 15px, 20px, 25px, 30px, 35px;
+// @each $size in $sizes {
+//   .fontsize-#{$size} {
+//     font-size: $size;
+//   }
+// }
+
+@function Process($num) {
+  @return #{$num * 5}px;
+}
+
+@for $value from 1 through 7 {
+  .fontsize-#{$value*5} {
+    // font-size: 1px * $value;
+    // font-size: #{$value}px;
+    font-size: Process($value);
+  }
+}
+
+// $x: 7;
+// $size: 5px;
+// @while $x > 0 {
+//   $test: $x * 5;
+//   .fontsize-#{$test} {
+//     font-size: $size * $x;
+//   }
+//   $x: $x - 1;
+// }
+
+$number: -32px;
+$paddings: 5px, 10px, 20px;
+$margins: 5px, 10px, 20px;
+.text {
+  font: {
+    family: Gotham, "Helvetica Neue";
+    // size: abs($number);
+    size: random(100);
+    style: normal;
+    weight: bold;
+  }
+
+  border: ceil(1.2px) solid black;
+  //   padding: floor(14.9px);
+  //   padding: max(4px, 20px);
+  //   padding: max($paddings...);
+  //   padding: min($paddings...);
+  //   margin: round(12.2px);
+  font-weight: round(399.5);
+  width: percentage(0.5);
+
+  @if unitless(7px) {
+    // birimi varsa true yoksa false çalışır (7px or 7)
+    padding: min($paddings...);
+  } @else {
+    padding: max($paddings...);
+  }
+
+  @if comparable(7px, 2em) {
+    // birimler uyumlu ise true döner eğer birimler arası fark varsa false döner (7px, 2em) (7px, 2px)
+    margin: min($margins...);
+  } @else {
+    margin: max($margins...);
+  }
+}
