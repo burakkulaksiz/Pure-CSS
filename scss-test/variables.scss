@@ -1,0 +1,91 @@
+// colors
+
+// Primary
+$primaryTextColor: #fff;
+$primaryColor: #ff6000;
+$primaryHoverColor: #bf4800;
+$primaryPressedColor: #ff904c;
+
+// Variant
+$variantColor: #ffefe5;
+$variantHoverColor: #ffbf99;
+$variantPressedColor: #f5f5f5;
+$variantTextColor: #ff6000;
+$variantHoverTextColor: #bf4800;
+
+//mixins
+@mixin icon($isHasIcon) {
+  @if $isHasIcon {
+    .icon {
+      font-size: 20px;
+    }
+  } @else {
+    .icon {
+      display: none;
+    }
+  }
+}
+
+@mixin btnText($isBtnText) {
+  @if $isBtnText {
+    .btnText {
+      width: 58px;
+      height: 24px;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  } @else {
+    .btnText {
+      display: none;
+    }
+  }
+}
+
+@mixin btnSizes($isBtnText, $isHasIcon) {
+  @if $isBtnText == true {
+    @if $isHasIcon == true {
+      width: 122px;
+    } @else {
+      width: 90px;
+    }
+  } @else if $isBtnText == false {
+    width: 48px;
+  }
+}
+
+@mixin isDisabled($isDisabled) {
+  @if $isDisabled {
+    opacity: 0.38;
+  }
+}
+
+@mixin bgColor($color) {
+  @if $color == #{"primary"} {
+    background: $primaryColor;
+    color: $primaryTextColor;
+
+    &:hover {
+      background: $primaryHoverColor;
+    }
+
+    &:active {
+      background: $primaryPressedColor;
+    }
+  } @else if $color == #{"variant"} {
+    background: $variantColor;
+    color: $variantTextColor;
+
+    &:hover {
+      background: $variantHoverColor;
+      color: $variantHoverTextColor;
+    }
+
+    &:active {
+      background: $variantPressedColor;
+      color: $variantTextColor;
+    }
+  }
+}

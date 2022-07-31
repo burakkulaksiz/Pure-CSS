@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+.btnBasic {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  @include bgColor("primary");
+
+  @include isDisabled(false);
+
+  @include btnSizes($isBtnText: false, $isHasIcon: true);
+
+  @include btnText(false);
+
+  @include icon(true);
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px rgba(108, 132, 250, 0.2);
+    border-radius: 8px;
+  }
+}
